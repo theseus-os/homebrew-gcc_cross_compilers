@@ -15,10 +15,10 @@ class X8664ElfGcc < Formula
   def install
     binutils = Formulary.factory 'x86_64-elf-binutils'
 
-    ENV['CC'] = '/usr/local/opt/gcc/bin/gcc-8'
-    ENV['CXX'] = '/usr/local/opt/gcc/bin/g++-8'
-    ENV['CPP'] = '/usr/local/opt/gcc/bin/cpp-8'
-    ENV['LD'] = '/usr/local/opt/gcc/bin/gcc-8'
+    ENV['CC'] = '/usr/local/opt/gcc@8/bin/gcc-8'
+    ENV['CXX'] = '/usr/local/opt/gcc@8/bin/g++-8'
+    ENV['CPP'] = '/usr/local/opt/gcc@8/bin/cpp-8'
+    ENV['LD'] = '/usr/local/opt/gcc@8/bin/gcc-8'
     ENV['PATH'] += ":#{binutils.prefix/"bin"}"
 
     mkdir 'build' do
